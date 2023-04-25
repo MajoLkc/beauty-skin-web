@@ -1,1 +1,5 @@
 export const OPENING = "/"
+export const ABOUT_US = "/o-nas"
+export const SERVICES = "/sluzby"
+export const PRICE_LIST = "/cennik"
+export const CONTACT = "/kontakt"
