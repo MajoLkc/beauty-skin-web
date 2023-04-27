@@ -1,11 +1,38 @@
 import { Layout as AntLayout } from "antd"
+import { ReactNode } from "react"
+import styled from "styled-components"
+import config from "../../config.json"
 
 const { Header, Content, Footer } = AntLayout
 
-export const Layout: React.FC = () => <AntLayout />
+type Props = {
+  children: ReactNode
+}
 
-export const LayoutHeader: React.FC = () => <Header />
+const StyledHeader = styled(Header)`
+  background: ${config.primaryColor};
+  .active {
+    color: ${config.secondaryColor};
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+`
 
-export const LayoutContent: React.FC = () => <Content />
+export const Layout: React.FC<Props> = ({ children }) => (
+  <AntLayout>{children}</AntLayout>
+)
 
-export const LayoutFooter: React.FC = () => <Footer />
+export const LayoutHeader: React.FC<Props> = ({ children }) => (
+  <StyledHeader>{children}</StyledHeader>
+)
+
+export const LayoutContent: React.FC<Props> = ({ children }) => (
+  <Content>{children}</Content>
+)
+
+export const LayoutFooter: React.FC<Props> = ({ children }) => (
+  <Footer>{children}</Footer>
+)
