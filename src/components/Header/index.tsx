@@ -12,7 +12,7 @@ const StyledText = styled(Text)`
   color: ${config.secondaryColor};
   font-size: 40px;
   font-weight: 600;
-  margin-left: 15px;
+  margin-left: 10px;
 `
 
 const StyledNavLink = styled(NavLink)`
@@ -21,6 +21,8 @@ const StyledNavLink = styled(NavLink)`
   :hover {
     color: ${config.secondaryColor};
     background-color: ${config.tertiaryColor};
+    // font-weight: bold;
+    // transition: 0.5;
   }
 `
 
