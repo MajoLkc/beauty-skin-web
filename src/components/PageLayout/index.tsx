@@ -13,6 +13,7 @@ const StyledHeader = styled(Header)`
   background: ${config.primaryColor};
   .active {
     color: ${config.secondaryColor};
+    font-weight: bold;
   }
   .logo {
     display: flex;

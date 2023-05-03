@@ -4,7 +4,7 @@ import { Opening } from "../../pages/Opening"
 import { ConfigProvider } from "antd"
 import config from "../../config.json"
 import { Header } from "../Header"
-import { Layout } from "../PageLayout"
+import { Layout, LayoutContent } from "../PageLayout"
 
 type ThemeData = {
   colorPrimary: string
@@ -28,9 +28,11 @@ const App = () => (
   >
     <Layout>
       <Header />
-      <Routes>
-        <Route path={route.OPENING} element={<Opening />} />
-      </Routes>
+      <LayoutContent>
+        <Routes>
+          <Route path={route.OPENING} element={<Opening />} />
+        </Routes>
+      </LayoutContent>
     </Layout>
   </ConfigProvider>
 )
