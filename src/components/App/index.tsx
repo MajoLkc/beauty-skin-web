@@ -4,6 +4,7 @@ import { Opening } from "../../pages/Opening"
 import { ConfigProvider } from "antd"
 import config from "../../config.json"
 import { Header } from "../Header"
+import { Footer } from "../Footer"
 import { Layout, LayoutContent } from "../PageLayout"
 
 type ThemeData = {
@@ -33,6 +34,7 @@ const App = () => (
           <Route path={route.OPENING} element={<Opening />} />
         </Routes>
       </LayoutContent>
+      <Footer />
     </Layout>
   </ConfigProvider>
 )

@@ -21,6 +21,9 @@ const StyledHeader = styled(Header)`
     justify-content: center;
   }
 `
+const StyledFooter = styled(Footer)`
+  background: ${config.primaryColor};
+`
 
 export const Layout: React.FC<Props> = ({ children }) => (
   <AntLayout>{children}</AntLayout>
@@ -35,5 +38,5 @@ export const LayoutContent: React.FC<Props> = ({ children }) => (
 )
 
 export const LayoutFooter: React.FC<Props> = ({ children }) => (
-  <Footer>{children}</Footer>
+  <StyledFooter>{children}</StyledFooter>
 )
