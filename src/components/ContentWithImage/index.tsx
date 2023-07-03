@@ -1,6 +1,8 @@
 import { Row, Col, Space, Typography } from "antd"
 import { Subtitle } from "../Titles"
 import { Image } from "../Image"
+import styled from "styled-components"
+import config from '../../config.json'
 
 const { Text } = Typography
 
@@ -8,47 +10,57 @@ type Props = {
   viceVersa?: boolean
   subtitle: string
   texts: string[]
-  key: string
+  name: string
   imageSrc: string
   imageAlt: string
   imageHeight: number
 }
 
+const Box = styled(Row)`
+  border-radius: 20px;
+  box-shadow: ${config.tertiaryColor} 7px 7px 20px;
+  margin-bottom: 40px;
+`
+
+const Section = styled(Col)`
+  margin: 20px;
+`
+
 export const ContentWithImage: React.FC<Props> = ({
   viceVersa,
   subtitle,
   texts,
-  key,
+  name,
   imageSrc,
   imageAlt,
-  imageHeight
+  imageHeight,
 }) => {
-  const mappedTexts = texts.map((text, i) => (
-    <Text key={`${key}-${i}`}>{text}</Text>
+  const mappedTexts = texts.map((text, index) => (
+    <Text key={`${name}-${index}`}>{text}</Text>
   ))
   return (
-    <Row>
+    <Box>
       {viceVersa ? (
         <>
-          <Col span={12}>
+          <Section span={11}>
             <Image src={imageSrc} alt={imageAlt} height={imageHeight} />
-          </Col>
-          <Col span={12}>
+          </Section>
+          <Section span={11}>
             <Subtitle text={subtitle} />
             <Space direction="vertical">{mappedTexts}</Space>
-          </Col>
+          </Section>
         </>
       ) : (
         <>
-          <Col span={12}>
+          <Section span={11}>
             <Subtitle text={subtitle} />
             <Space direction="vertical">{mappedTexts}</Space>
-          </Col>
-          <Col span={12}>
+          </Section>
+          <Section span={11}>
             <Image src={imageSrc} alt={imageAlt} height={imageHeight} />
-          </Col>
+          </Section>
         </>
       )}
-    </Row>
+    </Box>
   )
 }

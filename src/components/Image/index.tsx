@@ -8,7 +8,7 @@ type Props = {
 }
 
 const StyledImage = styled(AntImage)`
-border-radius: 20px;
+  border-radius: 20px;
 `
 
 export const Image: React.FC<Props> = ({ src, alt, height }) => (

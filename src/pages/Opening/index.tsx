@@ -46,7 +46,7 @@ export const Opening: React.FC = () => (
     <ContentWithImage
       subtitle="Čo môžete u nás očakávať"
       texts={expectations}
-      key="expectation"
+      name="expectation"
       imageSrc={image_1}
       imageAlt="Masáž krku"
       imageHeight={350}
@@ -55,7 +55,7 @@ export const Opening: React.FC = () => (
       viceVersa={true}
       subtitle="Kozmetika CHRISTINA"
       texts={cosmeticTexts}
-      key="cosmetic"
+      name="cosmetic"
       imageSrc={image_2}
       imageAlt="kozmetika"
       imageHeight={300}
@@ -63,7 +63,7 @@ export const Opening: React.FC = () => (
     <ContentWithImage
       subtitle="Čo ponúkame"
       texts={offers}
-      key="offer"
+      name="offer"
       imageSrc={image_3}
       imageAlt="Pleťová maska na tvári"
       imageHeight={440}

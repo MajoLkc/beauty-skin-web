@@ -21,7 +21,7 @@ const defaultData: ThemeData = {
   colorLinkHover: config.secondaryColor,
 }
 
-const App = () => (
+const App:React.FC = () => (
   <ConfigProvider
     theme={{
       token: defaultData,
