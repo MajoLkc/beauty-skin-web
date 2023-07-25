@@ -11,14 +11,17 @@ type Props = {
 
 const StyledHeader = styled(Header)`
   background: ${config.primaryColor};
+  width: 100%;
   .active {
-    color: ${config.secondaryColor};
-    font-weight: bold;
+    color: ${config.secondaryColor} !important;
   }
   .logo {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: left;
+    justify-content: left;
+  }
+  .ant-menu-item:hover::after {
+    border-bottom-color: ${config.secondaryColor} !important;
   }
 `
 const StyledFooter = styled(Footer)`

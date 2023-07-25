@@ -4,9 +4,16 @@ import * as routes from "../../routes"
 import logo from "../../assets/images/logo-small.png"
 import styled from "styled-components"
 import config from "../../config.json"
-import { Typography } from "antd"
+import { Typography, Row, Menu as AntMenu, Drawer } from "antd"
+import React, { useState } from "react"
+import { MenuOutlined } from "@ant-design/icons"
 
 const { Text } = Typography
+
+type MenuProps = {
+  isInline?: boolean
+  onSelect?: any
+}
 
 const StyledText = styled(Text)`
   color: ${config.secondaryColor};
@@ -15,37 +22,103 @@ const StyledText = styled(Text)`
   margin-left: 10px;
 `
 
-const StyledNavLink = styled(NavLink)`
-  padding: 22px;
-  height: 64px;
-  :hover {
-    color: ${config.secondaryColor};
-    background-color: ${config.tertiaryColor};
-    // font-weight: bold;
-    // transition: 0.5;
+const HeaderContentWrapper = styled(Row)`
+  max-width: 1280px;
+  margin: 0px auto;
+  @media (min-width: 700px) {
+    .menu-icon {
+      display: none;
+    }
+  }
+  @media (max-width: 760px) {
+    .title {
+      display: none;
+    }
   }
 `
 
-export const Header: React.FC = () => (
-  <LayoutHeader>
-    <div
-      style={{
-        width: "1400px",
-        display: "flex",
-        justifyContent: "space-between",
-        margin: "0px auto",
-      }}
-    >
-      <NavLink className="logo" to={routes.OPENING}>
-        <img src={logo} alt="logo" />
-        <StyledText>Beauty skin</StyledText>
-      </NavLink>
-      <div>
-        {/* <StyledNavLink to={routes.ABOUT_US}>O nás</StyledNavLink>
-        <StyledNavLink to={routes.SERVICES}>Služby</StyledNavLink>
-        <StyledNavLink to={routes.PRICE_LIST}>Cenník</StyledNavLink>
-        <StyledNavLink to={routes.CONTACT}>Kontakt</StyledNavLink> */}
-      </div>
-    </div>
-  </LayoutHeader>
+const StyledNavLink = styled(NavLink)`
+  &:hover {
+    color: ${config.secondaryColor} !important;
+  }
+`
+
+const StyledMenu = styled(AntMenu)`
+  border: none;
+  background-color: transparent;
+  font-size: 20px;
+`
+
+const StyledDrawer = styled(Drawer)`
+  background: ${config.primaryColor};
+`
+
+const MenuWrapper = styled.div`
+  @media (max-width: 700px) {
+    display: none;
+  }
+`
+
+const Menu: React.FC<MenuProps> = ({ isInline, onSelect }) => (
+  <StyledMenu
+    onSelect={onSelect}
+    mode={isInline ? "inline" : "horizontal"}
+    items={[
+      {
+        label: <StyledNavLink to={routes.ABOUT_US}>O nás</StyledNavLink>,
+        key: "about",
+      },
+      {
+        label: <StyledNavLink to={routes.SERVICES}>Služby</StyledNavLink>,
+        key: "services",
+      },
+      {
+        label: <StyledNavLink to={routes.PRICE_LIST}>Cenník</StyledNavLink>,
+        key: "prices",
+      },
+      {
+        label: <StyledNavLink to={routes.CONTACT}>Kontakt</StyledNavLink>,
+        key: "contact",
+      },
+    ]}
+  />
 )
+
+export const Header: React.FC = () => {
+  const [openMenu, setOpenMenu] = useState<boolean>(false)
+  return (
+    <LayoutHeader>
+      <HeaderContentWrapper justify="space-between">
+        <NavLink className="logo" to={routes.OPENING}>
+          <img src={logo} alt="logo" />
+          <StyledText className="title">Beauty skin</StyledText>
+        </NavLink>
+        <MenuOutlined
+          style={{ color: "black", fontSize: "50px" }}
+          onClick={() => {
+            setOpenMenu(true)
+          }}
+          className="menu-icon"
+        />
+        <MenuWrapper>
+          <Menu />
+        </MenuWrapper>
+        <StyledDrawer
+          open={openMenu}
+          onClose={() => {
+            setOpenMenu(false)
+          }}
+          closable={false}
+          bodyStyle={{ backgroundColor: config.primaryColor }}
+        >
+          <Menu
+            isInline
+            onSelect={() => {
+              setOpenMenu(false)
+            }}
+          />
+        </StyledDrawer>
+      </HeaderContentWrapper>
+    </LayoutHeader>
+  )
+}
