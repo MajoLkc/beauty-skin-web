@@ -1,11 +1,11 @@
-import { LayoutFooter } from '../PageLayout'
-import styled from 'styled-components'
-import config from '../../config.json'
-import { Typography } from 'antd'
-import fbLogo from '../../assets/images/fb-logo.png'
-import homeIcon from '../../assets/icons/home-icon.png'
-import phoneIcon from '../../assets/icons/phone-icon.png'
-import mailIcon from '../../assets/icons/mail-icon.png'
+import { LayoutFooter } from "../PageLayout"
+import styled from "styled-components"
+import config from "../../config.json"
+import { Typography } from "antd"
+import fbLogo from "../../assets/images/fb-logo.png"
+import homeIcon from "../../assets/icons/home-icon.png"
+import phoneIcon from "../../assets/icons/phone-icon.png"
+import mailIcon from "../../assets/icons/mail-icon.png"
 
 const { Text } = Typography
 
@@ -19,7 +19,7 @@ const StyledText = styled(Text)`
 
 const FooterWrapper = styled.div`
   position: relative;
-  width: 1280px;
+  max-width: 1280px;
   margin-right: auto;
   margin-left: auto;
   padding-right: auto;
@@ -32,10 +32,11 @@ const FooterWrapper = styled.div`
 `
 const FlexWrapper = styled.div`
   display: flex;
-  // position: relative;
   box-sizing: border-box;
-  // align-items: center;
   justify-content: space-between;
+  @media (max-width: 870px) {
+    display: block;
+  }
 `
 
 const Section = styled.div`
@@ -44,19 +45,24 @@ const Section = styled.div`
   flex-direction: column;
   align-items: flex-start;
   border-left: 2px solid ${config.secondaryColor};
+  @media (max-width: 870px) {
+    margin-top: 20px;
+  }
 `
 
 const SectionRight = styled(Section)`
   align-items: flex-end;
   border-left: none;
   margin-right: 10px;
-`  
+  @media (max-width: 870px) {
+    display: none;
+  }
+`
 
 const SocialMediaLink = styled.a`
   margin-top: 10px;
   color: ${config.secondaryColor};
   transition: color 0.3s;
-
   &:hover {
     color: ${config.primaryColor};
   }
@@ -72,18 +78,9 @@ const SocialMediaIcon = styled.img`
 export const Footer: React.FC = () => (
   <LayoutFooter>
     <FooterWrapper>
-      {/* <div
-      style={{ }}
-        width: '1400px',
-        display: 'flex',
-        justifyContent: 'space-between',
-        margin: '0px auto',
-      }}
-    > */}
       <FlexWrapper>
         <Section>
           <StyledText>Beauty Skin - Varín</StyledText>
-          {/* div className="address" */}
           <SocialMediaLink
             href="https://www.facebook.com/profile.php?id=100090645713719"
             target="_blank"
@@ -93,14 +90,14 @@ export const Footer: React.FC = () => (
           </SocialMediaLink>
         </Section>
         <SectionRight>
-          <StyledText> Jozefa Martinčeka 116, 013 03, Varín </StyledText>
-          <StyledText> +421 905 916 124 </StyledText>
-          <StyledText> beautyskinvarin@gmail.com </StyledText>
-        </SectionRight>
-        <Section>
           <SocialMediaIcon src={homeIcon} alt="Address" />
           <SocialMediaIcon src={phoneIcon} alt="Phone" />
           <SocialMediaIcon src={mailIcon} alt="Email" />
+        </SectionRight>
+        <Section>
+          <StyledText> Jozefa Martinčeka 116, 013 03, Varín </StyledText>
+          <StyledText> +421 905 916 124 </StyledText>
+          <StyledText> beautyskinvarin@gmail.com </StyledText>
         </Section>
       </FlexWrapper>
     </FooterWrapper>
