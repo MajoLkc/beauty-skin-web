@@ -38,6 +38,7 @@ const HeaderContentWrapper = styled(Row)`
 `
 
 const StyledNavLink = styled(NavLink)`
+  color: ${config.textColor} !important;
   &:hover {
     color: ${config.secondaryColor} !important;
   }
