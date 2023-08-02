@@ -2,8 +2,11 @@ import { ReactNode } from "react"
 import styled from "styled-components"
 
 const StyledWrapper = styled.div`
-  width: 1280px;
+  max-width: 1280px;
   margin: 0 auto;
+  @media (max-width: 1350px) {
+    margin: 5%;
+  }
 `
 
 type Props = {
