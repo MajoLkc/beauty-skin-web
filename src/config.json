@@ -3,5 +3,11 @@
   "primaryColor": "#D5C0AF",
   "secondaryColor": "#CE5D81",
   "tertiaryColor": "#D9C5B4",
-  "textColor": "#444444"
+  "textColor": "#444444",
+  "pages": {
+    "aboutUs": "O nás",
+    "services": "Služby",
+    "priceList": "Cenník",
+    "contact": "Kontakt"
+  }
 }
