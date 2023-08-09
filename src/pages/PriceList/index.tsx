@@ -4,7 +4,9 @@ import type { ColumnsType } from "antd/es/table"
 import { ContentWrapper } from "../../components/ContentWrapper"
 import config from "../../config.json"
 import { priceList } from "./priceList"
-import { DocumentHead } from "../../components/DocumentHead"
+import { PageName } from "../../components/PageName"
+
+const pageName = config.pages.priceList
 
 const Wrapper = styled.div`
   margin-bottom: 30px;
@@ -20,7 +22,8 @@ const Wrapper = styled.div`
     color: #444444;
     font-size: 18px;
   }
-  th:nth-child(2), td:nth-child(2) {
+  th:nth-child(2),
+  td:nth-child(2) {
     text-align: right !important;
   }
 `
@@ -51,18 +54,9 @@ const priceListToTable: DataType[] = priceList.map((item, index) => ({
   price: `${item.price.toFixed(2)}€`,
 }))
 
-const Header = styled.h1`
-  @import url("https://fonts.googleapis.com/css2?family=Parisienne&display=swap");
-  font-family: Parisienne, cursive;
-  font-size: 3em;
-  color: #ce5d81;
-  text-shadow: 2px 2px 4px #d9c5b4;
-`
-
 export const PriceList: React.FC = () => (
   <ContentWrapper>
-    <DocumentHead page={config.pages.priceList} />
-    <Header>{config.pages.priceList}</Header>
+    <PageName nameOfPage={pageName} />
     <Wrapper>
       <Table
         pagination={false}
