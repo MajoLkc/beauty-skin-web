@@ -6,6 +6,8 @@ import config from "../../config.json"
 import { Header } from "../Header"
 import { Footer } from "../Footer"
 import { Layout, LayoutContent } from "../PageLayout"
+import { Contact } from "../../pages/Contact"
+import { PriceList } from "../../pages/PriceList"
 
 type ThemeData = {
   colorPrimary: string
@@ -32,6 +34,8 @@ const App: React.FC = () => (
       <LayoutContent>
         <Routes>
           <Route path={route.OPENING} element={<Opening />} />
+          <Route path={route.PRICE_LIST} element={<PriceList />} />
+          <Route path={route.CONTACT} element={<Contact />} />
         </Routes>
       </LayoutContent>
       <Footer />
