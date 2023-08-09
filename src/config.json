@@ -9,5 +9,19 @@
     "services": "Služby",
     "priceList": "Cenník",
     "contact": "Kontakt"
-  }
+  },
+  "contact": {
+    "address": "Jozefa Martinčeka 116, 013 03, Varín",
+    "phoneNumber": "0905 916 124",
+    "email": "beautyskinvarin@gmail.com"
+  },
+  "socialMedia": {
+    "facebook": "Beauty skin- Varín"
+  },
+  "links": {
+    "facebook": "https://www.facebook.com/people/Beauty-skin-Var%C3%ADn/100090645713719/",
+    "messenger": "https://www.messenger.com/t/105804119129178"
+  },
+  "googleMapUrl": "https://www.google.com/maps/place/Jozefa+Martin%C4%8Deka+116,+013+03+Var%C3%ADn/@49.202903,18.870863,16z/data=!4m6!3m5!1s0x47145754d89bc25b:0x4456d6199769c887!8m2!3d49.2029029!4d18.8708633!16s%2Fg%2F11c4sqtmll?hl=sk&entry=ttu",
+  "googleMapFrameUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2606.8764707330897!2d18.8708633!3d49.2029029!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47145754d89bc25b%3A0x4456d6199769c887!2sJozefa%20Martin%C4%8Deka%20116%2C%20013%2003%20Var%C3%ADn!5e0!3m2!1ssk!2ssk!4v1690515564079!5m2!1ssk!2ssk"
 }
