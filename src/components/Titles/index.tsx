@@ -5,17 +5,19 @@ import config from "../../config.json"
 const AntTitle = Typography.Title
 
 const StyledTitle = styled(AntTitle)`
-  font-family: "Alex Brush";
-  font-size: 80px !important;
-  margin: 0 !important;
-  color: ${config.primaryColor} !important;
+  @import url("https://fonts.googleapis.com/css2?family=Parisienne&display=swap");
+  font-family: Parisienne, cursive;
+  font-size: 3em;
+  color: ${config.secondaryColor} !important;
+  text-shadow: 2px 2px 4px #d9c5b4;
 `
 
 const StyledSubtitle = styled(AntTitle)`
-//   font-family: "Alex Brush";
-//   font-size: 80px !important;
-//   margin: 0 !important;
-//   color: ${config.primaryColor} !important;
+  @import url("https://fonts.googleapis.com/css2?family=Parisienne&display=swap");
+  font-family: Parisienne, cursive;
+  font-size: 2em;
+  color: ${config.secondaryColor} !important;
+  text-shadow: 2px 2px 4px #d9c5b4;
 `
 
 type Props = {
