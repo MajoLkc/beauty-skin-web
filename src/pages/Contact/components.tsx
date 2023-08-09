@@ -1,12 +1,10 @@
 import styled from "styled-components"
 import config from "../../config.json"
-import { DocumentHead } from "../../components/DocumentHead"
-import { Subtitle, Title } from "../../components/Titles"
+import { Subtitle } from "../../components/Titles"
 import { Typography } from "antd"
 
 const { Paragraph, Link, Text } = Typography
 
-const pageName = config.pages.contact
 const { googleMapUrl, googleMapFrameUrl } = config
 const facebookPageName = config.socialMedia.facebook
 const facebookUrl = config.links.facebook
@@ -70,13 +68,6 @@ const Info: React.FC<InfoProps> = ({ name, value, link, target }) => (
       {value}
     </Link>
   </Paragraph>
-)
-
-export const PageName: React.FC = () => (
-  <>
-    <DocumentHead page={pageName} />
-    <Title text={pageName} />
-  </>
 )
 
 export const ContactInfo: React.FC = () => (
