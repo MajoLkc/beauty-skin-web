@@ -57,17 +57,21 @@ const StyledMap = styled.div`
   }
 `
 
+const StyledParagraph = styled(Paragraph)`
+  margin-left: 10px;
+`
+
 const Iframe: React.FC<IframeProps> = ({ title, sourceUrl, loadingType }) => (
   <iframe title={title} src={sourceUrl} loading={loadingType} />
 )
 
 const Info: React.FC<InfoProps> = ({ name, value, link, target }) => (
-  <Paragraph>
+  <StyledParagraph>
     <Text strong>{`${name}: `}</Text>
     <Link target={target} href={link}>
       {value}
     </Link>
-  </Paragraph>
+  </StyledParagraph>
 )
 
 export const ContactInfo: React.FC = () => (
