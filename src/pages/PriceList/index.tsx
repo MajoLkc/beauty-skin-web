@@ -5,6 +5,8 @@ import { ContentWrapper } from "../../components/ContentWrapper"
 import config from "../../config.json"
 import { priceList } from "./priceList"
 import { PageName } from "../../components/PageName"
+import { NavLink } from "react-router-dom"
+import * as routes from "../../routes"
 
 const pageName = config.pages.priceList
 
@@ -39,7 +41,7 @@ const columns: ColumnsType<DataType> = [
     title: "Služba",
     dataIndex: "service",
     key: "service",
-    render: (text) => <a>{text}</a>,
+    render: (text) => <NavLink to={`${routes.SERVICES}#${text}`}>{text}</NavLink>,
   },
   {
     title: "Cena",

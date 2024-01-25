@@ -6,8 +6,9 @@ import { Subtitle } from "../../components/Titles"
 import { sliderImages } from "./sliderImages"
 import { ImageSlider } from "../../components/ImageSlider"
 import styled from "styled-components"
+import { Paragraph } from "../../components/Paragraph"
 
-const { Text, Paragraph } = Typography
+const { Text } = Typography
 const pageName = config.pages.aboutUs
 
 const adventages = [
@@ -45,15 +46,14 @@ export const AboutUs: React.FC = () => (
     <PageName nameOfPage={pageName} />
     <Wrapper>
       <TextWrapper>
-        <Paragraph>
-          <Text>
+        <Paragraph
+          text="
             V našom kozmetickom salóne používame dermokozmetiku CHRISTINA. Ide o
             korektívnu kozmetiku, ktorá rieši rôzne estetické problémy pleti ako
             je akné, post-akné, suchá a mastná seborea, cievne defekty,
             hyperpigmentácia, podráždená a citlivá pleť, predčasné starnutie
-            pleti a vrásky.
-          </Text>
-        </Paragraph>
+            pleti a vrásky."
+        />
         <List
           header={<Subtitle text="Výhody kozmetiky CHRISTINA" />}
           dataSource={adventages}
@@ -75,18 +75,16 @@ export const AboutUs: React.FC = () => (
         </List.Item>
       )}
     />
-    <Paragraph>
-      <Text>
+    <Paragraph
+      text="
         Vďaka vysokej účinnosti prípravkov používajú niektoré rady aj v
-        dermatologických klinikách.
-      </Text>
-    </Paragraph>
-    <Paragraph>
-      <Text>
+        dermatologických klinikách."
+    />
+    <Paragraph
+      text="
         Kozmetické prípravky sú vyrábané z vysoko kvalitných surovín, bez obsahu
         alergénov, ingrediencie sú starostlivo testované. Obsahujú prírodné
-        konzervačné látky.
-      </Text>
-    </Paragraph>
+        konzervačné látky."
+    />
   </ContentWrapper>
 )

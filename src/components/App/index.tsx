@@ -9,6 +9,7 @@ import { Layout, LayoutContent } from "../PageLayout"
 import { Contact } from "../../pages/Contact"
 import { PriceList } from "../../pages/PriceList"
 import { AboutUs } from "../../pages/AboutUs"
+import { Services } from "../../pages/Services"
 
 type ThemeData = {
   colorPrimary: string
@@ -36,6 +37,7 @@ const App: React.FC = () => (
         <Routes>
           <Route path={route.OPENING} element={<Opening />} />
           <Route path={route.ABOUT_US} element={<AboutUs />} />
+          <Route path={route.SERVICES} element={<Services />} />
           <Route path={route.PRICE_LIST} element={<PriceList />} />
           <Route path={route.CONTACT} element={<Contact />} />
         </Routes>

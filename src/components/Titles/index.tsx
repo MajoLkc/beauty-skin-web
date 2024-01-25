@@ -24,6 +24,7 @@ const StyledSmallTitle = styled(StyledSubtitle)`
 
 type Props = {
   text: string
+  id?: string
 }
 
 export const Title: React.FC<Props> = ({ text }) => (
@@ -34,6 +35,8 @@ export const Subtitle: React.FC<Props> = ({ text }) => (
   <StyledSubtitle level={2}>{text}</StyledSubtitle>
 )
 
-export const SmallTitle: React.FC<Props> = ({ text }) => (
-  <StyledSmallTitle level={3}>{text}</StyledSmallTitle>
+export const SmallTitle: React.FC<Props> = ({ text, id }) => (
+  <StyledSmallTitle level={3} id={id}>
+    {text}
+  </StyledSmallTitle>
 )

@@ -6,6 +6,10 @@ import image_2 from "../../assets/images/serums_640.jpg"
 import image_3 from "../../assets/images/rita_mask_brash_1_640.jpg"
 import { Title } from "../../components/Titles"
 import { ContentWithImage } from "../../components/ContentWithImage"
+import { Box } from "../../components/Box"
+import { PageName } from "../../components/PageName"
+
+const pageName = config.name
 
 const expectations = [
   "príjemné čisté prostredie",
@@ -40,9 +44,8 @@ const offers = [
 
 export const Opening: React.FC = () => (
   <ContentWrapper>
-    <DocumentHead />
-    Kozmetický salón
-    <Title text={config.name} />
+    <PageName nameOfPage={`Kozmetický salón - ${pageName}`} isOpening/>
+    <Box/>
     <ContentWithImage
       subtitle="Čo môžete u nás očakávať"
       texts={expectations}
