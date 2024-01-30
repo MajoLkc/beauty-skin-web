@@ -35,7 +35,8 @@ const App: React.FC = () => (
       <Header />
       <LayoutContent>
         <Routes>
-          <Route path={route.OPENING} element={<Opening />} />
+          <Route path="/*" element={<Opening />} />
+          {/* <Route path={route.OPENING} element={<Opening />} /> */}
           <Route path={route.ABOUT_US} element={<AboutUs />} />
           <Route path={route.SERVICES} element={<Services />} />
           <Route path={route.PRICE_LIST} element={<PriceList />} />
