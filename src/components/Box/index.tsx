@@ -75,11 +75,11 @@ export const Box: React.FC = () => (
         </Text>
       </StyledParagraph>
       <ButtonsWrapper>
-        <Link href="tel:+421905916124">
+        <Link href={`tel:${config.contact.internationalNumber}`}>
           <Button type="primary" label="Objednávka telefonicky" />
         </Link>
         <Link
-          href="https://www.messenger.com/t/105804119129178"
+          href={config.links.messenger}
           target="_blank"
           rel="noreferrer"
         >
