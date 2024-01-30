@@ -10,9 +10,21 @@ const StyledTitle = styled(AntTitle)`
   font-size: 3em;
   color: ${config.secondaryColor} !important;
   text-shadow: 2px 2px 4px #d9c5b4;
+
+  // Centering Styles
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  // height: 100vh; // This makes the container take the full viewport height
+  // width: 100%; // This ensures the container spans the full width
 `
 
-const StyledSubtitle = styled(StyledTitle)`
+const StyledSubtitle = styled(AntTitle)`
+  @import url("https://fonts.googleapis.com/css2?family=Parisienne&display=swap");
+  font-family: Parisienne, cursive;
+  color: ${config.secondaryColor} !important;
+  text-shadow: 2px 2px 4px #d9c5b4;
   font-size: 2em;
   margin-left: 10px;
 `
