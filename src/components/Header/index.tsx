@@ -20,6 +20,10 @@ const StyledText = styled(Text)`
   font-size: 40px;
   font-weight: 600;
   margin-left: 10px;
+  @import url("https://fonts.googleapis.com/css2?family=Parisienne&display=swap");
+  font-family: Parisienne, cursive;
+  color: ${config.secondaryColor} !important;
+  text-shadow: 2px 2px 4px #d9c5b4;
 `
 
 const HeaderContentWrapper = styled(Row)`
@@ -65,6 +69,10 @@ const Menu: React.FC<MenuProps> = ({ isInline, onSelect }) => (
     onSelect={onSelect}
     mode={isInline ? "inline" : "horizontal"}
     items={[
+      // {
+      //   label: <StyledNavLink to={routes.OPENING}>Domov</StyledNavLink>,
+      //   key: "opening",
+      // },
       {
         label: <StyledNavLink to={routes.ABOUT_US}>O nás</StyledNavLink>,
         key: "about",
@@ -92,7 +100,7 @@ export const Header: React.FC = () => {
       <HeaderContentWrapper justify="space-between">
         <NavLink className="logo" to={routes.OPENING}>
           <img src={logo} alt="logo" />
-          <StyledText className="title">Beauty skin</StyledText>
+          <StyledText className="title">{config.name}</StyledText> 
         </NavLink>
         <MenuOutlined
           style={{ color: "black", fontSize: "50px" }}
