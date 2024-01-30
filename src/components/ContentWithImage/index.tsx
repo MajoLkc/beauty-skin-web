@@ -1,19 +1,18 @@
-import { Row, Col, Space, Typography } from "antd"
+import { Row, Col, Space } from "antd"
 import { Subtitle } from "../Titles"
-import { Image } from "../Image"
 import styled from "styled-components"
-import config from '../../config.json'
-
-const { Text } = Typography
+import config from "../../config.json"
+import { Text } from "../Text"
 
 type Props = {
   viceVersa?: boolean
   subtitle: string
   texts: string[]
-  name: string
-  imageSrc: string
-  imageAlt: string
-  imageHeight: number
+  width?: number
+  name?: string
+  bgImage: string
+  imageAlt?: string
+  imageHeight?: number
 }
 
 const Box = styled(Row)`
@@ -26,12 +25,27 @@ const Section = styled(Col)`
   margin: 20px;
 `
 
+const StyledDiv = styled.div`
+  background-size: cover;
+  background-position: center center;
+  overflow: auto;
+  min-height: 240px;
+  width: 500px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  // border-radius: 20px;
+  box-shadow: ${config.tertiaryColor} 7px 7px 7px;
+  @media (max-width: 1120px) {
+    width: 100% !important;
+  }
+`
+
 export const ContentWithImage: React.FC<Props> = ({
-  viceVersa,
   subtitle,
   texts,
   name,
-  imageSrc,
+  bgImage,
+  width,
   imageAlt,
   imageHeight,
 }) => {
@@ -39,28 +53,11 @@ export const ContentWithImage: React.FC<Props> = ({
     <Text key={`${name}-${index}`}>{text}</Text>
   ))
   return (
-    <Box>
-      {viceVersa ? (
-        <>
-          <Section span={11}>
-            <Image src={imageSrc} alt={imageAlt} height={imageHeight} />
-          </Section>
-          <Section span={11}>
-            <Subtitle text={subtitle} />
-            <Space direction="vertical">{mappedTexts}</Space>
-          </Section>
-        </>
-      ) : (
-        <>
-          <Section span={11}>
-            <Subtitle text={subtitle} />
-            <Space direction="vertical">{mappedTexts}</Space>
-          </Section>
-          <Section span={11}>
-            <Image src={imageSrc} alt={imageAlt} height={imageHeight} />
-          </Section>
-        </>
-      )}
-    </Box>
+    <StyledDiv style={{ backgroundImage: `url(${bgImage})`, width }}>
+        <Subtitle text={subtitle} />
+      <Section span={24}>
+        <Space direction="vertical">{mappedTexts}</Space>
+      </Section>
+    </StyledDiv>
   )
 }

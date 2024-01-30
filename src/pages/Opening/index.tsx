@@ -1,13 +1,33 @@
 import { ContentWrapper } from "../../components/ContentWrapper"
-import { DocumentHead } from "../../components/DocumentHead"
 import config from "../../config.json"
-import image_1 from "../../assets/images/rita_treat_close_eyes_640.jpg"
-import image_2 from "../../assets/images/serums_640.jpg"
-import image_3 from "../../assets/images/rita_mask_brash_1_640.jpg"
-import { Title } from "../../components/Titles"
+import backgroundImage_1 from "../../assets/images/rita_treat_close_eyes_op_03_640.jpg"
+import backgroundImage_2 from "../../assets/images/serums_op_03_640.jpg"
+import backgroundImage_3 from "../../assets/images/rita_treat_brash_2_op_03.jpg"
 import { ContentWithImage } from "../../components/ContentWithImage"
 import { Box } from "../../components/Box"
 import { PageName } from "../../components/PageName"
+import { Space } from "antd"
+import styled from "styled-components"
+
+const Wrapper = styled.div`
+  @media (min-width: 1120px) {
+    border-radius: 20px;
+    box-shadow: ${config.tertiaryColor} 7px 7px 20px;
+    background-color: white;
+    margin-bottom: 40px;
+    margin-left: 70px;
+    margin-right: 70px;
+    width: 1140px;
+  }
+`
+
+const SubWrapper = styled.div`
+  @media (min-width: 1120px) {
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+`
 
 const pageName = config.name
 
@@ -44,32 +64,31 @@ const offers = [
 
 export const Opening: React.FC = () => (
   <ContentWrapper>
-    <PageName nameOfPage={`Kozmetický salón - ${pageName}`} isOpening/>
-    <Box/>
-    <ContentWithImage
-      subtitle="Čo môžete u nás očakávať"
-      texts={expectations}
-      name="expectation"
-      imageSrc={image_1}
-      imageAlt="Masáž krku"
-      imageHeight={350}
-    />
-    <ContentWithImage
-      viceVersa={true}
-      subtitle="Kozmetika CHRISTINA"
-      texts={cosmeticTexts}
-      name="cosmetic"
-      imageSrc={image_2}
-      imageAlt="kozmetika"
-      imageHeight={300}
-    />
-    <ContentWithImage
-      subtitle="Čo ponúkame"
-      texts={offers}
-      name="offer"
-      imageSrc={image_3}
-      imageAlt="Pleťová maska na tvári"
-      imageHeight={440}
-    />
+    <PageName nameOfPage={`Kozmetický salón - ${pageName}`} isOpening />
+    <Box />
+    <Wrapper>
+      <SubWrapper>
+        <Space direction="vertical">
+          <ContentWithImage
+            texts={expectations}
+            subtitle="Čo môžete u nás očakávať"
+            bgImage={backgroundImage_1}
+            width={420}
+          />
+          <ContentWithImage
+            texts={cosmeticTexts}
+            subtitle="Kozmetika CHRISTINA"
+            bgImage={backgroundImage_2}
+            width={420}
+          />
+        </Space>
+        <ContentWithImage
+          texts={offers}
+          subtitle="Čo ponúkame"
+          bgImage={backgroundImage_3}
+          width={300}
+        />
+      </SubWrapper>
+    </Wrapper>
   </ContentWrapper>
 )
