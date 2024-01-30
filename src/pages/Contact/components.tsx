@@ -27,7 +27,7 @@ type InfoProps = {
 const StyledWrapper = styled.div`
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   @media (max-width: 760px) {
     display: block;
   }
