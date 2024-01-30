@@ -34,14 +34,22 @@ const StyledDiv = styled.div`
 const BoxWrapper = styled.div`
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   @media (max-width: 1120px) {
     display: block;
   }
 `
 
+// const Text = styled(AntText)`
+//   color: ${config.secondaryColor} !important;
+// `
+
 const Text = styled(AntText)`
-  color: ${config.secondaryColor} !important;
+  color: ${config.textColor};
+  font-size: 15px;
+  font-weight: 600;
+  // margin-left: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 `
 
 const ButtonsWrapper = styled.div`
