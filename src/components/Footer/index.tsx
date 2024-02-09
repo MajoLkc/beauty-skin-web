@@ -1,8 +1,9 @@
 import { LayoutFooter } from "../PageLayout"
 import styled from "styled-components"
 import config from "../../config.json"
-import { Typography } from "antd"
+import { Space, Typography } from "antd"
 import fbLogo from "../../assets/images/fb-logo.png"
+import messengerLogo from "../../assets/icons/messenger-pink.png"
 import homeIcon from "../../assets/icons/home-icon.png"
 import phoneIcon from "../../assets/icons/phone-icon.png"
 import mailIcon from "../../assets/icons/mail-icon.png"
@@ -75,19 +76,32 @@ const SocialMediaIcon = styled.img`
   color: ${config.secondaryColor};
 `
 
+const StyledSpace = styled(Space)`
+  margin-top: 8px;
+`
+
 export const Footer: React.FC = () => (
   <LayoutFooter>
     <FooterWrapper>
       <FlexWrapper>
         <Section>
           <StyledText>Beauty Skin - Varín</StyledText>
-          <SocialMediaLink
-            href="https://www.facebook.com/profile.php?id=100090645713719"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <SocialMediaIcon src={fbLogo} alt="Facebook page" />
-          </SocialMediaLink>
+          <StyledSpace>
+            <SocialMediaLink
+              href="https://www.facebook.com/profile.php?id=100090645713719"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <SocialMediaIcon src={fbLogo} alt="Facebook page" />
+            </SocialMediaLink>
+            <SocialMediaLink
+              href="https://www.facebook.com/profile.php?id=100090645713719"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <SocialMediaIcon src={messengerLogo} alt="Facebook page" />
+            </SocialMediaLink>
+          </StyledSpace>
         </Section>
         <SectionRight>
           <SocialMediaIcon src={homeIcon} alt="Address" />

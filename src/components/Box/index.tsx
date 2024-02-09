@@ -24,6 +24,7 @@ const StyledDiv = styled.div`
   min-height: 240px;
   width: 500px;
   margin-bottom: 30px;
+  // margin-right: 30px;
   border-radius: 20px;
   box-shadow: ${config.tertiaryColor} 7px 7px 20px;
   @media (max-width: 1120px) {
@@ -34,6 +35,7 @@ const StyledDiv = styled.div`
 const BoxWrapper = styled.div`
   width: 100%;
   display: flex;
+  // justify-content: center;
   justify-content: space-around;
   @media (max-width: 1120px) {
     display: block;

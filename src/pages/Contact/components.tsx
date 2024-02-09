@@ -9,7 +9,7 @@ const { googleMapUrl, googleMapFrameUrl } = config
 const facebookPageName = config.socialMedia.facebook
 const facebookUrl = config.links.facebook
 const messengerUrl = config.links.messenger
-const { address, phoneNumber, email } = config.contact
+const { address, phoneNumber, email, internationalNumber } = config.contact
 
 type IframeProps = {
   title: string
@@ -79,7 +79,7 @@ export const ContactInfo: React.FC = () => (
     <StyledBox>
       <Subtitle text="Kontaktné informácie" />
       <Info link={googleMapUrl} name="Adresa" value={address} target="_blank" />
-      <Info link={`tel:${phoneNumber}`} name="Telefón" value={phoneNumber} />
+      <Info link={`tel:${internationalNumber}`} name="Telefón" value={phoneNumber} />
       <Info link={`mailto:${email}`} name="Email" value={email} />
     </StyledBox>
     <StyledBox>

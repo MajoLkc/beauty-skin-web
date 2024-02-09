@@ -59,6 +59,7 @@ const offers = [
   "Depiláciu",
   "Ošetrenia pleti kozmetikou Christina",
   "Prístrojové ošetrenie",
+  "Biomicroneedling",
   "Líčenie",
 ]
 
