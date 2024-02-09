@@ -2,7 +2,7 @@ import styled from "styled-components"
 import config from "../../config.json"
 import { Subtitle } from "../../components/Titles"
 import { Typography } from "antd"
-import { editPhoneNumber } from "../../utils/phoneNumberUtils"
+import { editPhoneNumber } from "../../utils/dataTransform"
 
 const { Paragraph, Link, Text } = Typography
 

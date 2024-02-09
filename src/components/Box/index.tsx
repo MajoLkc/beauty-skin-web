@@ -7,7 +7,7 @@ import config from "../../config.json"
 import { NavLink } from "react-router-dom"
 import * as routes from "../../routes"
 import { SmallTitle, Subtitle } from "../Titles"
-import { editPhoneNumber } from "../../utils/phoneNumberUtils"
+import { editPhoneNumber } from "../../utils/dataTransform"
 
 const { Link, Paragraph } = Typography
 const AntText = Typography.Text
