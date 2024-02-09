@@ -9,6 +9,7 @@ import phoneIcon from "../../assets/icons/phone-icon.png"
 import mailIcon from "../../assets/icons/mail-icon.png"
 
 const { Text } = Typography
+const { address, phoneNumber, email } = config.contact
 
 const StyledText = styled(Text)`
   color: ${config.textColor};
@@ -109,9 +110,9 @@ export const Footer: React.FC = () => (
           <SocialMediaIcon src={mailIcon} alt="Email" />
         </SectionRight>
         <Section>
-          <StyledText> Jozefa Martinčeka 116, 013 03, Varín </StyledText>
-          <StyledText> +421 905 916 124 </StyledText>
-          <StyledText> beautyskinvarin@gmail.com </StyledText>
+          <StyledText>{address}</StyledText>
+          <StyledText>{phoneNumber}</StyledText>
+          <StyledText>{email}</StyledText>
         </Section>
       </FlexWrapper>
     </FooterWrapper>
