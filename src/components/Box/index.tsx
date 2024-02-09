@@ -7,10 +7,11 @@ import config from "../../config.json"
 import { NavLink } from "react-router-dom"
 import * as routes from "../../routes"
 import { SmallTitle, Subtitle } from "../Titles"
+import { editPhoneNumber } from "../../utils/phoneNumberUtils"
 
 const { Link, Paragraph } = Typography
-
 const AntText = Typography.Text
+const phoneNumberToCall = editPhoneNumber(config.contact.phoneNumber)
 
 const StyledParagraph = styled(Paragraph)`
   margin-left: 10px;
@@ -77,14 +78,10 @@ export const Box: React.FC = () => (
         </Text>
       </StyledParagraph>
       <ButtonsWrapper>
-        <Link href={`tel:${config.contact.internationalNumber}`}>
+        <Link href={`tel:${phoneNumberToCall}`}>
           <Button type="primary" label="Objednávka telefonicky" />
         </Link>
-        <Link
-          href={config.links.messenger}
-          target="_blank"
-          rel="noreferrer"
-        >
+        <Link href={config.links.messenger} target="_blank" rel="noreferrer">
           <Button type="primary" label="Objednávka online" />
         </Link>
       </ButtonsWrapper>
