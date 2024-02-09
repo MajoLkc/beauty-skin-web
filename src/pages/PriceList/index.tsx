@@ -7,6 +7,7 @@ import { priceList } from "./priceList"
 import { PageName } from "../../components/PageName"
 import { NavLink } from "react-router-dom"
 import * as routes from "../../routes"
+import { editPrice } from "../../utils/dataTransform"
 
 const pageName = config.pages.priceList
 
@@ -41,7 +42,9 @@ const columns: ColumnsType<DataType> = [
     title: "Služba",
     dataIndex: "service",
     key: "service",
-    render: (text) => <NavLink to={`${routes.SERVICES}#${text}`}>{text}</NavLink>,
+    render: (text) => (
+      <NavLink to={`${routes.SERVICES}#${text}`}>{text}</NavLink>
+    ),
   },
   {
     title: "Cena",
@@ -50,11 +53,14 @@ const columns: ColumnsType<DataType> = [
   },
 ]
 
-const priceListToTable: DataType[] = priceList.map((item, index) => ({
-  key: index,
-  service: item.service,
-  price: `${item.price.toFixed(2)}€`,
-}))
+const priceListToTable: DataType[] = priceList.map((item, index) => {
+  const { service, price } = item
+  return {
+    key: index,
+    service,
+    price: editPrice(price),
+  }
+})
 
 export const PriceList: React.FC = () => (
   <ContentWrapper>
