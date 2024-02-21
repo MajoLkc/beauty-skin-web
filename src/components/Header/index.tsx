@@ -59,6 +59,7 @@ const StyledDrawer = styled(Drawer)`
 `
 
 const MenuWrapper = styled.div`
+  width: 461px;
   @media (max-width: 700px) {
     display: none;
   }
@@ -69,10 +70,10 @@ const Menu: React.FC<MenuProps> = ({ isInline, onSelect }) => (
     onSelect={onSelect}
     mode={isInline ? "inline" : "horizontal"}
     items={[
-      // {
-      //   label: <StyledNavLink to={routes.OPENING}>Domov</StyledNavLink>,
-      //   key: "opening",
-      // },
+      {
+        label: <StyledNavLink to={routes.OPENING}>Domov</StyledNavLink>,
+        key: "opening",
+      },
       {
         label: <StyledNavLink to={routes.ABOUT_US}>O nás</StyledNavLink>,
         key: "about",
@@ -100,7 +101,7 @@ export const Header: React.FC = () => {
       <HeaderContentWrapper justify="space-between">
         <NavLink className="logo" to={routes.OPENING}>
           <img src={logo} alt="logo" />
-          <StyledText className="title">{config.name}</StyledText> 
+          <StyledText className="title">{config.name}</StyledText>
         </NavLink>
         <MenuOutlined
           style={{ color: "black", fontSize: "50px" }}
