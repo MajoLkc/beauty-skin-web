@@ -25,10 +25,18 @@ export const Services: React.FC = () => (
     <SmallTitle text="Line repair" id="line_repair" />
     <Paragraph text="Starostlivé relaxačné ošetrenie zamerané na oživenie pleti" />
     <List data={lineRepairList} />
-    <SmallTitle text="Comodex" />
-    <Paragraph text="Krásna pleť bez problémov" />
+    <SmallTitle text="Comodex - krásna pleť bez problémov" />
     <Paragraph text="Táto kozmetická rada je zacielená na efektívnu starostlivosť o aknóznu a problematickú pokožku. Hlavnou prednosťou ošetrenia COMODEX je to, že zvyšuje odolnosť pleti, jej schopnosť brániť sa nepriaznivým faktorom, pleť nasycuje potrebnými látkami a minerálmi. Vďaka tomu sa dá úspešne znížiť frekvencia a stupeň postihnutia a predchádzať vzniku post-akné (jazvy, pigmentácia)." />
     <Paragraph text="Prípravky kozmetickej rady COMODEX spĺňajú všetky nároky na prostriedky pre starostlivosť o problematickú pokožku. Majú výrazný sebostatický, keratolytický a antibakteriálny účinok, udržiavajú vlhkosť a kyslosť pokožky v rámci normy, zbavujú pokožku stagnujúcich a zápalových prejavov. Pleť sa stáva čistejšou, zlepšuje sa jej textúra a farba." />
+    <SmallTitle text="BioPhyto rada" />
+    <Paragraph text="BioPhyto rada je určená pre citlivú, podráždenú, problematickú a kuperóznu pleť. Základom rady je tradičná receptúra spoločnosti CHRISTINA, ktorá je už roky známa svojou vysokou účinnosťou."/>
+    <Paragraph text="Prípravky sú teraz obohatené o nové biologicky aktívne látky. Navyše je rada rozšírená o ďalšie inovačné produkty pre efektívne ucelené riešenia rôznych problémov pleti."/>
+    <Paragraph text="Jedno riešenie pre celú škálu kožných problémov: atopické ekzémy, kožné dermatitídy, akné, rozacea, cievne defekty, mastná, suchá seborea, podráždená pleť, citlivá pleť."/>
+    <Paragraph text="Prípravky rady BioPhyto obsahujú rastlinné extrakty: zelený čaj, červené korenie, tasmánske korenie, zázvor, škorica, komplex vitamínov B, extrakt akácie perzskej, bambucký olej, olej nechtíka."/>
+    <SmallTitle text="Biomicroneedling - prírodná revolúcia v starostlivosti o pleť" id="biomicroneedling"/>
+    <Paragraph text="Na redukciu akné, pigmentových škvŕn a omladenie pleti sa odteraz Slovensko bude pozerať inak."/>
+    <Paragraph text="Základom ošetrenia je sladkovodná špongia, ktorá sa rozloží na mikroskopické kryštáliky, tzv. spikuly. Hubové spikuly sú druh kremičitých biologických mikroihličiek, ktoré sa získavajú zo sladkovodných húb. Dokážu stimulovať dermis kože a naštartovať povrchovú mikrocirkuláciu kože. Účinne dodávajú aktívne zložky do dermis vrstvy a zároveň a urýchľujú metabolizmus buniek v bazálnej vrstve. V priebehu 5 minút sa 1,5 až 4 000 000 prírodných kremičitých mikroihličiek zavedie priamo do dermis vrstvy prostredníctvom ručnej masáže. Žiadne krvácanie, žiadne anestetikum a žiadne porušenie kože. SQT Biomicroneedling skracuje cyklus obnovy pokožky z 28 dní na 7 dní a dosahuje prirodzené, bezpečné a účinné fyzické omladenie."/>
+    <Paragraph text="V priebehu 5 minút spongilové hroty prerazia epidermálnu bariéru a vytvoria milióny drobných kanálikov v epiderme kože. Účinné látky a živiny sa cez mikroskopické kanáliky dostanú do dermis a účinné látky sa plne vstrebú. Spongilové špičky prenikajú hlboko do bazálnej vrstvy, aktivujú &quot;samoliečebnú funkciu&quot; pokožky, urýchľujú podkožnú mikrocirkuláciu, podporujú obnovu buniek a tvorbu kolagénu a regenerujú pokožku."/>
     <SmallTitle text="Skin scrubber" id="skin_scrubber" />
     <Paragraph text="Čistenie pleti pomocou ultrazvukovej špachtle, ktorá reguluje tvorbu kožného mazu a odstraňuje upchaté póry. Ide o neinvazívnu procedúru hĺbkového čistenia pleti, ktorá pracuje na princípe vysokofrekvenčných ultrazvukových vibrácií." />
     <Paragraph text="Neodporúča sa:  v tehotenstve, pri poruchách štítnej žľazy a strojčeku na srdci" />
