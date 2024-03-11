@@ -20,9 +20,10 @@ const adventages = [
 
 const lines = [
   "• jednotlivé rady sa od seba líšia technikou výroby, počtom a skladbou jednotlivých krokov",
-  "• každá rada pracuje na inom princípe, obsahuje rôzne ingrediencie ",
-  "• korektívna rada - riešenie konkrétnej estetickej vady alebo problému pleti • ošetrujúca rada - ošetrujúca a skrášľujúca starostlivosť všetkých typov pleti ",
-  "• každá rada obsahuje produkty aj pre domácu starostlivosť ",
+  "• každá rada pracuje na inom princípe, obsahuje rôzne ingrediencie",
+  "• korektívna rada - riešenie konkrétnej estetickej vady alebo problému pleti",
+  "• ošetrujúca rada - ošetrujúca a skrášľujúca starostlivosť všetkých typov pleti",
+  "• každá rada obsahuje produkty aj pre domácu starostlivosť",
 ]
 
 const Wrapper = styled.div`
