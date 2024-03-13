@@ -9,10 +9,15 @@ import phoneIcon from "../../assets/icons/phone-icon.png"
 import mailIcon from "../../assets/icons/mail-icon.png"
 
 const { Text } = Typography
-const { address, phoneNumber, email } = config.contact
+const {
+  primaryColor,
+  secondaryColor,
+  textColor,
+  contact: { address, phoneNumber, email },
+} = config
 
 const StyledText = styled(Text)`
-  color: ${config.textColor};
+  color: ${textColor};
   font-size: 15px;
   font-weight: 600;
   margin-left: 10px;
@@ -29,7 +34,7 @@ const FooterWrapper = styled.div`
   display: block;
   justify-content: space;
   align-items: center;
-  background-color: ${config.primaryColor};
+  background-color: ${primaryColor};
   box-sizing: border-box;
 `
 const FlexWrapper = styled.div`
@@ -46,7 +51,7 @@ const Section = styled.div`
   flex: 0 100%;
   flex-direction: column;
   align-items: flex-start;
-  border-left: 2px solid ${config.secondaryColor};
+  border-left: 2px solid ${secondaryColor};
   @media (max-width: 870px) {
     margin-top: 20px;
   }
@@ -63,10 +68,10 @@ const SectionRight = styled(Section)`
 
 const SocialMediaLink = styled.a`
   margin-top: 10px;
-  color: ${config.secondaryColor};
+  color: ${secondaryColor};
   transition: color 0.3s;
   &:hover {
-    color: ${config.primaryColor};
+    color: ${primaryColor};
   }
 `
 
@@ -74,7 +79,7 @@ const SocialMediaIcon = styled.img`
   width: 24px;
   height: 24px;
   margin-left: 10px;
-  color: ${config.secondaryColor};
+  color: ${secondaryColor};
 `
 
 const StyledSpace = styled(Space)`

@@ -9,6 +9,8 @@ import React, { useState } from "react"
 import { MenuOutlined } from "@ant-design/icons"
 
 const { Text } = Typography
+const { name, primaryColor, secondaryColor, textColor } = config
+const { OPENING, ABOUT_US, SERVICES, PRICE_LIST, CONTACT } = routes
 
 type MenuProps = {
   isInline?: boolean
@@ -16,13 +18,13 @@ type MenuProps = {
 }
 
 const StyledText = styled(Text)`
-  color: ${config.secondaryColor};
+  color: ${secondaryColor};
   font-size: 40px;
   font-weight: 600;
   margin-left: 10px;
   @import url("https://fonts.googleapis.com/css2?family=Parisienne&display=swap");
   font-family: Parisienne, cursive;
-  color: ${config.secondaryColor} !important;
+  color: ${secondaryColor} !important;
   text-shadow: 2px 2px 4px #d9c5b4;
 `
 
@@ -42,9 +44,9 @@ const HeaderContentWrapper = styled(Row)`
 `
 
 const StyledNavLink = styled(NavLink)`
-  color: ${config.textColor} !important;
+  color: ${textColor} !important;
   &:hover {
-    color: ${config.secondaryColor} !important;
+    color: ${secondaryColor} !important;
   }
 `
 
@@ -55,7 +57,7 @@ const StyledMenu = styled(AntMenu)`
 `
 
 const StyledDrawer = styled(Drawer)`
-  background: ${config.primaryColor};
+  background: ${primaryColor};
 `
 
 const MenuWrapper = styled.div`
@@ -71,23 +73,23 @@ const Menu: React.FC<MenuProps> = ({ isInline, onSelect }) => (
     mode={isInline ? "inline" : "horizontal"}
     items={[
       {
-        label: <StyledNavLink to={routes.OPENING}>Domov</StyledNavLink>,
+        label: <StyledNavLink to={OPENING}>Domov</StyledNavLink>,
         key: "opening",
       },
       {
-        label: <StyledNavLink to={routes.ABOUT_US}>O nás</StyledNavLink>,
+        label: <StyledNavLink to={ABOUT_US}>O nás</StyledNavLink>,
         key: "about",
       },
       {
-        label: <StyledNavLink to={routes.SERVICES}>Služby</StyledNavLink>,
+        label: <StyledNavLink to={SERVICES}>Služby</StyledNavLink>,
         key: "services",
       },
       {
-        label: <StyledNavLink to={routes.PRICE_LIST}>Cenník</StyledNavLink>,
+        label: <StyledNavLink to={PRICE_LIST}>Cenník</StyledNavLink>,
         key: "prices",
       },
       {
-        label: <StyledNavLink to={routes.CONTACT}>Kontakt</StyledNavLink>,
+        label: <StyledNavLink to={CONTACT}>Kontakt</StyledNavLink>,
         key: "contact",
       },
     ]}
@@ -99,9 +101,9 @@ export const Header: React.FC = () => {
   return (
     <LayoutHeader>
       <HeaderContentWrapper justify="space-between">
-        <NavLink className="logo" to={routes.OPENING}>
+        <NavLink className="logo" to={OPENING}>
           <img src={logo} alt="logo" />
-          <StyledText className="title">{config.name}</StyledText>
+          <StyledText className="title">{name}</StyledText>
         </NavLink>
         <MenuOutlined
           style={{ color: "black", fontSize: "50px" }}
@@ -119,7 +121,7 @@ export const Header: React.FC = () => {
             setOpenMenu(false)
           }}
           closable={false}
-          bodyStyle={{ backgroundColor: config.primaryColor }}
+          bodyStyle={{ backgroundColor: primaryColor }}
         >
           <Menu
             isInline

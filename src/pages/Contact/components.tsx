@@ -6,11 +6,15 @@ import { editPhoneNumber } from "../../utils/dataTransform"
 
 const { Paragraph, Link, Text } = Typography
 
-const { googleMapUrl, googleMapFrameUrl } = config
+const {
+  googleMapUrl,
+  googleMapFrameUrl,
+  tertiaryColor,
+  contact: { address, phoneNumber, email },
+} = config
 const facebookPageName = config.socialMedia.facebook
 const facebookUrl = config.links.facebook
 const messengerUrl = config.links.messenger
-const { address, phoneNumber, email } = config.contact
 const phoneNumberToCall = editPhoneNumber(phoneNumber)
 
 type IframeProps = {
@@ -37,7 +41,7 @@ const StyledWrapper = styled.div`
 
 const StyledBox = styled.div`
   border-radius: 20px;
-  box-shadow: ${config.tertiaryColor} 7px 7px 20px;
+  box-shadow: ${tertiaryColor} 7px 7px 20px;
   height: 200px;
   width: 45%;
   @media (max-width: 760px) {
@@ -55,7 +59,7 @@ const StyledMap = styled.div`
     height: 100%;
     border-radius: 20px !important;
     border: none;
-    box-shadow: ${config.tertiaryColor} 7px 7px 20px;
+    box-shadow: ${tertiaryColor} 7px 7px 20px;
   }
 `
 

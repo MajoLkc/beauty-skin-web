@@ -4,6 +4,8 @@ import styled from "styled-components"
 import config from "../../config.json"
 import { Text } from "../Text"
 
+const { tertiaryColor } = config
+
 type Props = {
   viceVersa?: boolean
   subtitle: string
@@ -17,7 +19,7 @@ type Props = {
 
 const Box = styled(Row)`
   border-radius: 20px;
-  box-shadow: ${config.tertiaryColor} 7px 7px 20px;
+  box-shadow: ${tertiaryColor} 7px 7px 20px;
   margin-bottom: 40px;
 `
 
@@ -34,7 +36,7 @@ const StyledDiv = styled.div`
   margin-bottom: 20px;
   margin-right: 20px;
   // border-radius: 20px;
-  box-shadow: ${config.tertiaryColor} 7px 7px 7px;
+  box-shadow: ${tertiaryColor} 7px 7px 7px;
   @media (max-width: 1120px) {
     width: 100% !important;
   }
@@ -54,7 +56,7 @@ export const ContentWithImage: React.FC<Props> = ({
   ))
   return (
     <StyledDiv style={{ backgroundImage: `url(${bgImage})`, width }}>
-        <Subtitle text={subtitle} />
+      <Subtitle text={subtitle} />
       <Section span={24}>
         <Space direction="vertical">{mappedTexts}</Space>
       </Section>

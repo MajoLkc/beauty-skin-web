@@ -2,7 +2,7 @@ import { ContentWrapper } from "../../components/ContentWrapper"
 import { PageName } from "../../components/PageName"
 import config from "../../config.json"
 import { Paragraph } from "../../components/Paragraph"
-import { SmallTitle, Subtitle } from "../../components/Titles"
+import { SmallTitle } from "../../components/Titles"
 import { List } from "../../components/List"
 
 const pageName = config.pages.services

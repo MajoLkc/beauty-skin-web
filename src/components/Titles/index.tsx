@@ -3,12 +3,13 @@ import styled from "styled-components"
 import config from "../../config.json"
 
 const AntTitle = Typography.Title
+const { secondaryColor } = config
 
 const StyledTitle = styled(AntTitle)`
   @import url("https://fonts.googleapis.com/css2?family=Parisienne&display=swap");
   font-family: Parisienne, cursive;
   font-size: 3em;
-  color: ${config.secondaryColor} !important;
+  color: ${secondaryColor} !important;
   text-shadow: 2px 2px 4px #d9c5b4;
 
   // Centering Styles
@@ -23,7 +24,7 @@ const StyledTitle = styled(AntTitle)`
 const StyledSubtitle = styled(AntTitle)`
   @import url("https://fonts.googleapis.com/css2?family=Parisienne&display=swap");
   font-family: Parisienne, cursive;
-  color: ${config.secondaryColor} !important;
+  color: ${secondaryColor} !important;
   text-shadow: 2px 2px 4px #d9c5b4;
   font-size: 2em;
   margin-left: 10px;

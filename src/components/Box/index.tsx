@@ -11,7 +11,12 @@ import { editPhoneNumber } from "../../utils/dataTransform"
 
 const { Link, Paragraph } = Typography
 const AntText = Typography.Text
-const phoneNumberToCall = editPhoneNumber(config.contact.phoneNumber)
+const {
+  tertiaryColor,
+  textColor,
+  contact: { phoneNumber },
+} = config
+const phoneNumberToCall = editPhoneNumber(phoneNumber)
 
 const StyledParagraph = styled(Paragraph)`
   margin-left: 10px;
@@ -27,7 +32,7 @@ const StyledDiv = styled.div`
   margin-bottom: 30px;
   // margin-right: 30px;
   border-radius: 20px;
-  box-shadow: ${config.tertiaryColor} 7px 7px 20px;
+  box-shadow: ${tertiaryColor} 7px 7px 20px;
   @media (max-width: 1120px) {
     width: 100%;
   }
@@ -43,12 +48,8 @@ const BoxWrapper = styled.div`
   }
 `
 
-// const Text = styled(AntText)`
-//   color: ${config.secondaryColor} !important;
-// `
-
 const Text = styled(AntText)`
-  color: ${config.textColor};
+  color: ${textColor};
   font-size: 15px;
   font-weight: 600;
   // margin-left: 10px;

@@ -4,16 +4,17 @@ import styled from "styled-components"
 import config from "../../config.json"
 
 const { Header, Content, Footer } = AntLayout
+const { primaryColor, secondaryColor } = config
 
 type Props = {
   children: ReactNode
 }
 
 const StyledHeader = styled(Header)`
-  background: ${config.primaryColor};
+  background: ${primaryColor};
   width: 100%;
   .active {
-    color: ${config.secondaryColor} !important;
+    color: ${secondaryColor} !important;
   }
   .logo {
     display: flex;
@@ -21,11 +22,11 @@ const StyledHeader = styled(Header)`
     justify-content: left;
   }
   .ant-menu-item:hover::after {
-    border-bottom-color: ${config.secondaryColor} !important;
+    border-bottom-color: ${secondaryColor} !important;
   }
 `
 const StyledFooter = styled(Footer)`
-  background: ${config.primaryColor};
+  background: ${primaryColor};
 `
 
 export const Layout: React.FC<Props> = ({ children }) => (

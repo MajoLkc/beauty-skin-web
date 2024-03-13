@@ -11,6 +11,8 @@ import { PriceList } from "../../pages/PriceList"
 import { AboutUs } from "../../pages/AboutUs"
 import { Services } from "../../pages/Services"
 
+const { ABOUT_US, SERVICES, PRICE_LIST, CONTACT } = route
+
 type ThemeData = {
   colorPrimary: string
   colorLink: string
@@ -36,11 +38,10 @@ const App: React.FC = () => (
       <LayoutContent>
         <Routes>
           <Route path="/*" element={<Opening />} />
-          {/* <Route path={route.OPENING} element={<Opening />} /> */}
-          <Route path={route.ABOUT_US} element={<AboutUs />} />
-          <Route path={route.SERVICES} element={<Services />} />
-          <Route path={route.PRICE_LIST} element={<PriceList />} />
-          <Route path={route.CONTACT} element={<Contact />} />
+          <Route path={ABOUT_US} element={<AboutUs />} />
+          <Route path={SERVICES} element={<Services />} />
+          <Route path={PRICE_LIST} element={<PriceList />} />
+          <Route path={CONTACT} element={<Contact />} />
         </Routes>
       </LayoutContent>
       <Footer />

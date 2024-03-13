@@ -10,15 +10,16 @@ import * as routes from "../../routes"
 import { editPrice } from "../../utils/dataTransform"
 
 const pageName = config.pages.priceList
+const { primaryColor, tertiaryColor, textColor } = config
 
 const Wrapper = styled.div`
   margin-bottom: 30px;
   .ant-table {
-    box-shadow: ${config.tertiaryColor} 7px 7px 20px;
+    box-shadow: ${tertiaryColor} 7px 7px 20px;
   }
   thead .ant-table-cell {
-    background-color: ${config.primaryColor} !important;
-    color: ${config.textColor} !important;
+    background-color: ${primaryColor} !important;
+    color: ${textColor} !important;
   }
   th {
     background-color: #d5c0af;
