@@ -1,4 +1,4 @@
-import { Row, Col, Space } from "antd"
+import { Col, Space } from "antd"
 import { Subtitle } from "../Titles"
 import styled from "styled-components"
 import config from "../../config.json"
@@ -16,12 +16,6 @@ type Props = {
   imageAlt?: string
   imageHeight?: number
 }
-
-const Box = styled(Row)`
-  border-radius: 20px;
-  box-shadow: ${tertiaryColor} 7px 7px 20px;
-  margin-bottom: 40px;
-`
 
 const Section = styled(Col)`
   margin: 20px;
