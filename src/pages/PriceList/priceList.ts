@@ -2,166 +2,181 @@ export const priceList = [
   {
     service: "Úprava obočia",
     price: 5,
-    path: "farbenie"
+    path: "farbenie",
   },
   {
     service: "Farbenie obočia",
     price: 7,
-    path: "farbenie"
+    path: "farbenie",
   },
   {
     service: "Henna brows",
     price: 12,
-    path: "henna"
+    path: "henna",
   },
   {
     service: "Farbenie rias",
     price: 8,
-    path: "farbenie"
+    path: "farbenie",
   },
   {
     service: "Farbenie rias a obočia",
     price: 12,
-    path: "farbenie"
+    path: "farbenie",
   },
   {
     service: "Lash lifting",
     price: 20,
-    path: "lash_lifting"
+    path: "lash_lifting",
   },
   {
     service: "Laminácia obočia",
     price: 20,
-    path: "laminacia"
+    path: "laminacia",
   },
   {
     service: "Hĺbkové čistenie pleti",
     price: 25,
-    path: "line_repair"
+    path: "line_repair",
   },
   {
     service: "Čistenie pleti – skin scrubber",
     price: 25,
-    path: "skin_scrubber"
+    path: "skin_scrubber",
   },
   {
     service: "Ultrazvukové ošetrenie pleti",
-    price: 25,
-    path: "ultrazvuk"
+    price: 30,
+    path: "ultrazvuk",
   },
   {
     service: "Masáž tváre, krku a dekoltu",
     price: 20,
-    path: "masaz"
+    path: "masaz",
   },
   {
     service: "Relaxačné ošetrenie pleti",
     price: 25,
-    path: "line_repair"
+    path: "line_repair",
+  },
+  {
+    service: "Ošetrenie z alpských ruží - anti age",
+    price: 30,
+    path: "",
   },
   {
     service: "Mikromasáž očného okolia",
     price: 15,
-    path: "masaz"
+    path: "masaz",
   },
   {
     service: "Microneedling Resurfacing",
     price: 60,
-    path: ""
+    path: "",
   },
   {
     service: "Microneedling Revitalizing",
     price: 65,
-    path: ""
+    path: "",
+  },
+  {
+    service: "Microneedling Nourishing",
+    price: 70,
+    path: "",
   },
   {
     service: "Microneedling Anti aging",
     price: 100,
-    path: ""
+    path: "",
   },
   {
     service: "Depilácia hornej pery",
     price: 3,
-    path: ""
+    path: "",
   },
   {
     service: "Depilácia líca/brada",
     price: 5,
-    path: ""
+    path: "",
   },
   {
     service: "Depilácia podpazušie/ruky",
     price: 10,
-    path: ""
+    path: "",
   },
   {
     service: "Depilácia predkolenie/chrbát",
     price: 15,
-    path: ""
+    path: "",
   },
   {
     service: "Depilácia celé nohy",
     price: 22,
-    path: ""
+    path: "",
   },
   {
     service: "Depilácia celý chrbát",
     price: 25,
-    path: ""
+    path: "",
   },
   {
     service: "Líčenie denné",
     price: 5,
-    path: ""
+    path: "",
   },
   {
     service: "Líčenie príležitostné",
     price: 15,
-    path: ""
+    path: "",
   },
   {
     service: "Líčenie večerné",
     price: 20,
-    path: ""
+    path: "",
   },
   {
     service: "Líčenie svadobné",
     price: 25,
-    path: ""
+    path: "",
   },
   {
     service: "Skúška svadobného líčenia",
     price: 20,
-    path: ""
+    path: "",
   },
   {
     service: "Svadobné líčenie + skúška líčenia",
     price: 40,
-    path: ""
+    path: "",
   },
   {
     service: "Lepenie rias",
     price: 10,
-    path: ""
+    path: "",
   },
   {
     service: "Lepenie rias (vlastné)",
     price: 3,
-    path: ""
+    path: "",
   },
   {
     service: "Lepenie trsov",
     price: 10,
-    path: ""
+    path: "",
   },
   {
     service: "Vypichnutie mílií",
     price: 5,
-    path: ""
+    path: "",
   },
   {
     service: "Vypichnutie mílií - veľké",
     price: 10,
-    path: ""
+    path: "",
+  },
+  {
+    service: "Ozonizér",
+    price: 5,
+    path: "",
   },
 ]
