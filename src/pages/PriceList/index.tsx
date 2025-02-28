@@ -3,7 +3,7 @@ import { Table } from "antd"
 import type { ColumnsType } from "antd/es/table"
 import { ContentWrapper } from "../../components/ContentWrapper"
 import config from "../../config.json"
-import { priceList } from "./priceList"
+import { priceList, additions } from "./priceList"
 import { PageName } from "../../components/PageName"
 import { NavLink } from "react-router-dom"
 import * as routes from "../../routes"
@@ -38,9 +38,25 @@ type DataType = {
   price: string
 }
 
-const columns: ColumnsType<DataType> = [
+const servicesColumns: ColumnsType<DataType> = [
   {
     title: "Služba",
+    dataIndex: "service",
+    key: "service",
+    render: (text) => (
+      <NavLink to={`${routes.SERVICES}#${text}`}>{text}</NavLink>
+    ),
+  },
+  {
+    title: "Cena",
+    dataIndex: "price",
+    key: "price",
+  },
+]
+
+const additionsColumns: ColumnsType<DataType> = [
+  {
+    title: "Služby k ošetreniu",
     dataIndex: "service",
     key: "service",
     render: (text) => (
@@ -63,14 +79,29 @@ const priceListToTable: DataType[] = priceList.map((item, index) => {
   }
 })
 
+const addingsPriceListToTable: DataType[] = additions.map((item, index) => {
+  const { service, price } = item
+  return {
+    key: index,
+    service,
+    price: editPrice(price),
+  }
+})
+
 export const PriceList: React.FC = () => (
   <ContentWrapper>
     <PageName nameOfPage={pageName} />
     <Wrapper>
       <Table
         pagination={false}
-        columns={columns}
+        columns={servicesColumns}
         dataSource={priceListToTable}
+      />
+      <Table
+        style={{ marginTop: "5px" }}
+        pagination={false}
+        columns={additionsColumns}
+        dataSource={addingsPriceListToTable}
       />
     </Wrapper>
   </ContentWrapper>

@@ -55,12 +55,20 @@ export const priceList = [
     path: "masaz",
   },
   {
-    service: "Relaxačné ošetrenie pleti",
+    service:
+      "Ošetrenie pleti Biophyto - ekzémy, rosacea, seborhea, citlivá pleť",
     price: 25,
     path: "line_repair",
   },
   {
-    service: "Ošetrenie z alpských ruží - anti age",
+    service:
+      "Relaxačné ošetrenie pleti Line repair - rozžiarenie, okysličenie a zjednotenie pleti",
+    price: 25,
+    path: "line_repair",
+  },
+  {
+    service:
+      "Ošetrenie z alpských ruží - Muse - omladenie a hĺbková hydratácia",
     price: 30,
     path: "",
   },
@@ -70,22 +78,22 @@ export const priceList = [
     path: "masaz",
   },
   {
-    service: "Microneedling Resurfacing",
+    service: "Microneedling Resurfacing - akné, jazvy",
     price: 60,
     path: "",
   },
   {
-    service: "Microneedling Revitalizing",
+    service: "Microneedling Revitalizing - pigmentové škvrny",
     price: 65,
     path: "",
   },
   {
-    service: "Microneedling Nourishing",
+    service: "Microneedling Nourishing - hĺbková hydratácia",
     price: 70,
     path: "",
   },
   {
-    service: "Microneedling Anti aging",
+    service: "Microneedling Anti aging - neinvazívne omladenie",
     price: 100,
     path: "",
   },
@@ -95,7 +103,7 @@ export const priceList = [
     path: "",
   },
   {
-    service: "Depilácia líca/brada",
+    service: "Depilácia brada",
     price: 5,
     path: "",
   },
@@ -125,13 +133,8 @@ export const priceList = [
     path: "",
   },
   {
-    service: "Líčenie príležitostné",
-    price: 15,
-    path: "",
-  },
-  {
     service: "Líčenie večerné",
-    price: 20,
+    price: "15-20",
     path: "",
   },
   {
@@ -140,7 +143,7 @@ export const priceList = [
     path: "",
   },
   {
-    service: "Skúška svadobného líčenia",
+    service: "Líčenie svadobné - skúška",
     price: 20,
     path: "",
   },
@@ -165,7 +168,7 @@ export const priceList = [
     path: "",
   },
   {
-    service: "Vypichnutie mílií",
+    service: "Odstránenie mílií",
     price: 5,
     path: "",
   },
@@ -175,7 +178,25 @@ export const priceList = [
     path: "",
   },
   {
-    service: "Ozonizér",
+    service: "Parafínový zábal na ruky",
+    price: 10,
+    path: "",
+  },
+]
+
+export const additions = [
+  {
+    service: "Očná maska",
+    price: 2,
+    path: "",
+  },
+  {
+    service: "Parafínový zábal na ruky",
+    price: 5,
+    path: "",
+  },
+  {
+    service: "Ozonizér - dezinfekcia pleti po čistení",
     price: 5,
     path: "",
   },
