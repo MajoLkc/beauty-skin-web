@@ -173,7 +173,7 @@ export const priceList = [
     path: "",
   },
   {
-    service: "Vypichnutie mílií - veľké",
+    service: "Odstránenie mílií - veľké",
     price: 10,
     path: "",
   },
