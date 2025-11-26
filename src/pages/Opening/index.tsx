@@ -61,6 +61,8 @@ const offers = [
   "Prístrojové ošetrenie",
   "Biomicroneedling",
   "Líčenie",
+  "Mikrodermabrázia",
+  "Kozmetika Esthemax",
 ]
 
 export const Opening: React.FC = () => (
