@@ -13,7 +13,9 @@ const {
   contact: { address, phoneNumber, email },
 } = config
 const facebookPageName = config.socialMedia.facebook
+const instagramPageName = config.socialMedia.instagram
 const facebookUrl = config.links.facebook
+const instagramUrl = config.links.instagram
 const messengerUrl = config.links.messenger
 const phoneNumberToCall = editPhoneNumber(phoneNumber)
 
@@ -98,6 +100,12 @@ export const ContactInfo: React.FC = () => (
         link={facebookUrl}
         name="Facebook"
         value={facebookPageName}
+        target="_blank"
+      />
+      <Info
+        link={instagramUrl}
+        name="Instagram"
+        value={instagramPageName}
         target="_blank"
       />
       <Info

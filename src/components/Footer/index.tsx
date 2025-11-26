@@ -1,12 +1,21 @@
 import { LayoutFooter } from "../PageLayout"
 import styled from "styled-components"
+import {
+  InstagramFilled,
+  FacebookFilled,
+  MessageFilled,
+} from "@ant-design/icons"
 import config from "../../config.json"
 import { Space, Typography } from "antd"
-import fbLogo from "../../assets/images/fb-logo.png"
-import messengerLogo from "../../assets/icons/messenger-pink.png"
 import homeIcon from "../../assets/icons/home-icon.png"
 import phoneIcon from "../../assets/icons/phone-icon.png"
 import mailIcon from "../../assets/icons/mail-icon.png"
+
+type Props = {
+  children: any
+  link: string
+  hasMarginLeft?: boolean
+}
 
 const { Text } = Typography
 const {
@@ -14,6 +23,7 @@ const {
   secondaryColor,
   textColor,
   contact: { address, phoneNumber, email },
+  links: { facebook, messenger, instagram },
 } = config
 
 const StyledText = styled(Text)`
@@ -70,9 +80,6 @@ const SocialMediaLink = styled.a`
   margin-top: 10px;
   color: ${secondaryColor};
   transition: color 0.3s;
-  &:hover {
-    color: ${primaryColor};
-  }
 `
 
 const SocialMediaIcon = styled.img`
@@ -86,6 +93,17 @@ const StyledSpace = styled(Space)`
   margin-top: 8px;
 `
 
+const IconWithLink: React.FC<Props> = ({ children, link, hasMarginLeft }) => (
+  <SocialMediaLink
+    style={{ fontSize: "25px", marginLeft: hasMarginLeft ? "10px" : "0" }}
+    href={link}
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    {children}
+  </SocialMediaLink>
+)
+
 export const Footer: React.FC = () => (
   <LayoutFooter>
     <FooterWrapper>
@@ -93,20 +111,15 @@ export const Footer: React.FC = () => (
         <Section>
           <StyledText>Beauty Skin - Varín</StyledText>
           <StyledSpace>
-            <SocialMediaLink
-              href="https://www.facebook.com/profile.php?id=100090645713719"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <SocialMediaIcon src={fbLogo} alt="Facebook page" />
-            </SocialMediaLink>
-            <SocialMediaLink
-              href="https://www.facebook.com/profile.php?id=100090645713719"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <SocialMediaIcon src={messengerLogo} alt="Facebook page" />
-            </SocialMediaLink>
+            <IconWithLink link={facebook} hasMarginLeft>
+              <FacebookFilled />
+            </IconWithLink>
+            <IconWithLink link={instagram}>
+              <InstagramFilled />
+            </IconWithLink>
+            <IconWithLink link={messenger}>
+              <MessageFilled />
+            </IconWithLink>
           </StyledSpace>
         </Section>
         <SectionRight>
