@@ -6,7 +6,7 @@ export const priceList = [
   },
   {
     service: "Farbenie obočia",
-    price: 7,
+    price: 8,
     path: "farbenie",
   },
   {
@@ -26,12 +26,12 @@ export const priceList = [
   },
   {
     service: "Lash lifting",
-    price: 20,
+    price: 25,
     path: "lash_lifting",
   },
   {
     service: "Laminácia obočia",
-    price: 20,
+    price: 25,
     path: "laminacia",
   },
   {
@@ -47,6 +47,11 @@ export const priceList = [
   {
     service: "Ultrazvukové ošetrenie pleti",
     price: 30,
+    path: "ultrazvuk",
+  },
+  {
+    service: "Ultrazvukové ošetrenie pleti a mikrodermabrázia",
+    price: 35,
     path: "ultrazvuk",
   },
   {
@@ -98,6 +103,11 @@ export const priceList = [
     path: "",
   },
   {
+    service: "Esthemax - prémiová starostlivosť o pleť",
+    price: 38,
+    path: "",
+  },
+  {
     service: "Depilácia hornej pery",
     price: 3,
     path: "",
@@ -133,23 +143,28 @@ export const priceList = [
     path: "",
   },
   {
-    service: "Líčenie večerné",
-    price: "15-20",
-    path: "",
-  },
-  {
-    service: "Líčenie svadobné",
-    price: 25,
-    path: "",
-  },
-  {
-    service: "Líčenie svadobné - skúška",
+    service: "Líčenie príležitostné",
     price: 20,
     path: "",
   },
   {
-    service: "Svadobné líčenie + skúška líčenia",
-    price: 40,
+    service: "Líčenie večerné",
+    price: 25,
+    path: "",
+  },
+  {
+    service: "Líčenie svadobné",
+    price: 30,
+    path: "",
+  },
+  {
+    service: "Líčenie svadobné - skúška",
+    price: 25,
+    path: "",
+  },
+  {
+    service: "Svadobné líčenie so skúškou",
+    price: 50,
     path: "",
   },
   {
@@ -197,6 +212,11 @@ export const additions = [
   },
   {
     service: "Ozonizér - dezinfekcia pleti po čistení",
+    price: 5,
+    path: "",
+  },
+  {
+    service: "Mikrodermabrázia",
     price: 5,
     path: "",
   },
