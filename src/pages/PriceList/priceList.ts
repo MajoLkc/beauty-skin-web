@@ -103,9 +103,9 @@ export const priceList = [
     path: "",
   },
   {
-    service: "Esthemax - prémiová starostlivosť o pleť",
+    service: "Esthemax - prémiová starostlivosť o pleť",
     price: 38,
-    path: "",
+    path: "esthermax",
   },
   {
     service: "Depilácia hornej pery",

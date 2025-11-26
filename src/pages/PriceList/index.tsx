@@ -36,6 +36,7 @@ type DataType = {
   key: number
   service: string
   price: string
+  path: string
 }
 
 const servicesColumns: ColumnsType<DataType> = [
@@ -43,8 +44,8 @@ const servicesColumns: ColumnsType<DataType> = [
     title: "Služba",
     dataIndex: "service",
     key: "service",
-    render: (text) => (
-      <NavLink to={`${routes.SERVICES}#${text}`}>{text}</NavLink>
+    render: (text, record) => (
+      <NavLink to={`${routes.SERVICES}#${record.path}`}>{text}</NavLink>
     ),
   },
   {
@@ -59,9 +60,10 @@ const additionsColumns: ColumnsType<DataType> = [
     title: "Služby k ošetreniu",
     dataIndex: "service",
     key: "service",
-    render: (text) => (
-      <NavLink to={`${routes.SERVICES}#${text}`}>{text}</NavLink>
-    ),
+    render: (text, record) => {
+      console.log(text, record)
+      return <NavLink to={`${routes.SERVICES}#${record.path}`}>{text}</NavLink>
+    },
   },
   {
     title: "Cena",
@@ -76,6 +78,7 @@ const priceListToTable: DataType[] = priceList.map((item, index) => {
     key: index,
     service,
     price: editPrice(price),
+    path: item.path,
   }
 })
 
@@ -85,6 +88,7 @@ const addingsPriceListToTable: DataType[] = additions.map((item, index) => {
     key: index,
     service,
     price: editPrice(price),
+    path: item.path,
   }
 })
 
