@@ -10,6 +10,7 @@ import { Contact } from "../../pages/Contact"
 import { PriceList } from "../../pages/PriceList"
 import { AboutUs } from "../../pages/AboutUs"
 import { Services } from "../../pages/Services"
+import { InfoModal } from "../InfoModal"
 
 const { ABOUT_US, SERVICES, PRICE_LIST, CONTACT } = route
 
@@ -33,6 +34,7 @@ const App: React.FC = () => (
       token: defaultData,
     }}
   >
+    <InfoModal />
     <Layout>
       <Header />
       <LayoutContent>

@@ -8,6 +8,9 @@ type Props = {
   label: string
   block?: boolean
   icon?: Component
+  key?: string
+  onClick?: () => void
+  style?: React.CSSProperties
 }
 
 const StyledButton = styled(AntButton)`
@@ -18,6 +21,14 @@ const StyledButton = styled(AntButton)`
   }
 `
 
-export const Button: React.FC<Props> = ({ type, label }) => (
-  <StyledButton type={type}>{label}</StyledButton>
+export const Button: React.FC<Props> = ({
+  type,
+  label,
+  key,
+  onClick,
+  style,
+}) => (
+  <StyledButton type={type} key={key} onClick={onClick} style={style}>
+    {label}
+  </StyledButton>
 )
